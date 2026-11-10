@@ -4,6 +4,8 @@
 
 body {
   margin: 0;
+  padding-top: 75px;
+  padding-left: 5rem;
 }
 
 p {
@@ -19,6 +21,13 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .hamburger-menu {
@@ -26,14 +35,15 @@ p {
 }
 
 .youtube-logo {
-  height: 1.5rem;
+  height: 1.25rem;
 }
 
 .left-section {
   width: 165px;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  padding-left: 25px;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 0.75rem;
   /* background-color: red; */
 }
@@ -44,19 +54,19 @@ p {
 }
 
 .search-bar {
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding-left: 0.65rem;
   height: 2.35rem;
   flex: 1;
   width: 0;
   border: 1px solid lightgray;
-  border-radius: 2.5px;
+  border-radius: 2px;
   box-shadow: inset 1px 1px 3px rgba(211, 211, 211, 0.199);
 }
 
 .search-bar::placeholder {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .search-icon {
@@ -66,7 +76,7 @@ p {
   justify-content: center;
   align-items: center;
   border: 1px solid lightgray;
-  border-radius: 2.5px;
+  border-radius: 2px;
   background-color: rgb(235, 235, 235);
   margin-left: -1px;
 
@@ -128,6 +138,63 @@ p {
   border-radius: 50%;
 }
 
+.notifications-icon-container {
+  position: relative;
+}
+
+.notifications-count {
+  position: absolute;
+  top: -2.5px;
+  right: -5px;
+  padding: 4px;
+  border: 2px solid white;
+  background-color: rgb(210, 0, 0);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: 8px;
+  height: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* side bar */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  width: 4.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+}
+
+.sidebar-link {
+  /* background-color: red; */
+  /* width: 50px; */
+  height: 75px;
+  text-align: center;
+}
+
+.sidebar-link:hover {
+  background-color: lightgrey;
+}
+
+.sidebar-link img {
+  width: 35%;
+}
+
+.sidebar-link p {
+  font-size: 0.6rem;
+  font-family: "roboto";
+}
+
 /* main styling*/
 
 .video-container {
@@ -142,6 +209,23 @@ p {
 
 .thumbnail-container {
   margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.video-time {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  color: white;
+  padding: 4px;
+  border-radius: 0.25rem;
+  font-family:
+    "roboto" Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .thumbnail {
